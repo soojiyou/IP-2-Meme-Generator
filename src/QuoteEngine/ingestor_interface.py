@@ -1,5 +1,6 @@
 from typing import List
 from .QuoteModel import QuoteModel
+from abc import ABC, abstractmethod
 
 extensions = {
     "TEXT": ".txt",
@@ -15,5 +16,6 @@ class IngestorInterface:
         return file_extension in extensions.values()
 
     @classmethod
+    @abstractmethod
     def parse(cls, path: str) -> List[QuoteModel]:
         pass

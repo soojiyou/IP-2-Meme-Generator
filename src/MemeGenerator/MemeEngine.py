@@ -27,7 +27,7 @@ class MemeEngine():
 
                 draw = ImageDraw.Draw(img)
                 draw.text((rand_x, rand_y), text, fill='white')
-                draw.text(((rand_x), (rand_y)),
+                draw.text(((rand_x), (rand_y+25)),
                           ('  - '+author), fill='white')
 
                 img.save(out_file, "JPEG")
